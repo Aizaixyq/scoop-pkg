@@ -1,0 +1,13 @@
+{
+    "version": "0.15.0",
+    "name": "build2",
+    "homepage": "https://www.build2.org/",
+    "description": "build2是一个开源、跨平台的构建工具，旨在模仿Rust Cargo在开发和打包C / C ++项目时的便利性，同时提供更多的深度和灵活性，特别是在构建系统中。",
+    "checksum": "sha256:2556da043d11d56a58bb5b4a8279e6eddf87d81b70e72c0e808008d807195efb",
+    "install": {
+      "file": "build2-install-msvc-0.15.0.bat",
+      "url": "https://download.build2.org/0.15.0/build2-install-msvc-0.15.0.bat",
+      "sha256": "sha256:2556da043d11d56a58bb5b4a8279e6eddf87d81b70e72c0e808008d807195efb",
+      "args": ""
+    }
+}

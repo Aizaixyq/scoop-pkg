@@ -13,9 +13,10 @@
           "hash": "2556da043d11d56a58bb5b4a8279e6eddf87d81b70e72c0e808008d807195efb"
       }
   },
+  "post_install": "build2-install-msvc-0.15.0.bat",
   "extract_dir": "build2",
   "bin": [
-      "bdep.exe"
+      "bdeq.exe"
   ],
   "checkver": {
       "github": ""

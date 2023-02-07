@@ -15,6 +15,7 @@ def copy_json_files(src_dir, dest_dir):
 
                 # Copy the file
                 shutil.copy2(src_file, dest_file)
+    return dir_path
 
 def categorize_json_files(root_dir):
     """Categorize JSON files based on the given rule and store them in subdirectories"""
@@ -34,10 +35,22 @@ def categorize_json_files(root_dir):
                 new_file_path = os.path.join(sub_dir, file_name)
                 os.rename(file_path, new_file_path)
 
-pkg_main_dir = '../pkg/Main/bucket'
-pkg_extras_dir = '../pkg/Extras/bucket'
-dest_dir = '.'
-copy_json_files(pkg_main_dir, dest_dir)
+pkg_main_dir = './pkg/Main/bucket'
+pkg_extras_dir = './pkg/Extras/bucket'
+dest_dir = './bucket'
+dir_path_ = copy_json_files(pkg_main_dir, dest_dir)
 copy_json_files(pkg_extras_dir, dest_dir)
 
-#categorize_json_files(dest_dir)
+"""
+pkg_extras_dir_bin = './pkg/Extras/bucket/bin'
+pkg_extras_dir_deprecated = './pkg/Extras/bucket/deprecated'
+pkg_extras_dir_scripts = './pkg/Extras/bucket/scripts'
+target_dir = "."
+def copy(pkg_extras_dir_bin, target_dir):
+    shutil.copy2(pkg_extras_dir_bin, target_dir)
+copy(pkg_extras_dir_bin, target_dir)
+copy(pkg_extras_dir_deprecated, target_dir)
+copy(pkg_extras_dir_scripts, target_dir)
+for file in os.listdir(pkg_extras_dir):
+    shutil.copy(os.path.join(pkg_extras_dir, file), target_dir)
+#categorize_json_files(dest_dir)"""

@@ -1,0 +1,6 @@
+[submodule "Extras"]
+	path = Extras
+	url = https://github.com/ScoopInstaller/Extras
+[submodule "Main"]
+	path = Main
+	url = https://github.com/ScoopInstaller/Main

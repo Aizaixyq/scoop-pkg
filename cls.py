@@ -35,8 +35,8 @@ def categorize_json_files(root_dir):
                 new_file_path = os.path.join(sub_dir, file_name)
                 os.rename(file_path, new_file_path)
 
-pkg_main_dir = './pkg/Main/bucket'
-pkg_extras_dir = './pkg/Extras/bucket'
+pkg_main_dir = './Main/bucket'
+pkg_extras_dir = './Extras/bucket'
 dest_dir = './bucket'
 dir_path_ = copy_json_files(pkg_main_dir, dest_dir)
 copy_json_files(pkg_extras_dir, dest_dir)

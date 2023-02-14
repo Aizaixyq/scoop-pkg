@@ -1,5 +1,6 @@
 # 导入os模块，用于操作文件和目录
 import os
+import shutil
 
 # 定义一个函数，用于获取文件名的首字母
 def get_first_letter(filename, len):
@@ -51,7 +52,7 @@ def move_json_files(source_folder, target_folder):
             if item.endswith(".json"):
                 # 将文件移动到目标文件夹中
                 new_path = os.path.join(target_folder, item)
-                os.copy(path, new_path)
+                shutil.copy(path, new_path)
                 # 打印移动的信息
                 print(f"copy {path} to {new_path}")
         # 如果是子目录，递归调用函数

@@ -3,8 +3,8 @@
     "description": "A command-line tool for fast searching scoop packages",
     "homepage": "https://github.com/Aizaixyq/scoop-fast",
     "license": "MIT",
-    "url": "https://github.com/Aizaixyq/scoop-fast/releases/download/0.0.1/sf.exe",
-    "hash": "sha256:b03b71bb4bd7f8cd410cc11b8fd9e58977098fc3926aa40a40d2cddfd2d9e43b",
+    "url": "https://github.com/Aizaixyq/scoop-fast/releases/download/0.0.3/sf.exe",
+    "hash": "sha256:6c0deca39b898201bf583fa82405a9a5776f8c48e7275db76bad925b12249886",
     "bin": "sf.exe",
     "checkver": {
         "github": "https://github.com/Aizaixyq/scoop-fast"

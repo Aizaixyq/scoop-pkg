@@ -4,7 +4,7 @@
     "homepage": "https://github.com/Aizaixyq/scoop-fast",
     "license": "MIT",
     "url": "https://github.com/Aizaixyq/scoop-fast/releases/download/0.0.1/sf.exe",
-    "hash": "sha256:ec2567e718dc19f02bf7044e679e0fff03e45298a3eb1ec97270043f237f8e59",
+    "hash": "sha256:b03b71bb4bd7f8cd410cc11b8fd9e58977098fc3926aa40a40d2cddfd2d9e43b",
     "bin": "sf.exe",
     "checkver": {
         "github": "https://github.com/Aizaixyq/scoop-fast"

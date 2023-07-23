@@ -1,4 +1,4 @@
-package("quickjs")
+package("quickjs-maye")
 
     set_homepage("https://bellard.org/quickjs/")
     set_description("QuickJS is a small and embeddable Javascript engine")

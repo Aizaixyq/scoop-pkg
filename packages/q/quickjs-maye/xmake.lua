@@ -4,7 +4,7 @@ package("quickjs-maye")
     set_description("QuickJS is a small and embeddable Javascript engine")
 
     add_urls("https://github.com/maye174/quickjs.git")
-    add_versions("2021.03.27", "e224a9c7f222403ba3c325afc7067129eedc4134a885a062b26f6ce86801cbb8")
+    add_versions("master", "3a25a1f75325ce5791735644d007409b68e9e66a2cebe518a6d777369c829b7b")
 
     if is_plat("linux", "macosx", "iphoneos", "cross") then
         add_syslinks("pthread", "dl", "m")

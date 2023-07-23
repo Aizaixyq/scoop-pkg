@@ -1,4 +1,7 @@
-How do I install these manifests?
----------------------------------
+## repo
 
-To add this bucket, run `scoop bucket add scoop-fast-pkg https://github.com/Aizaixyq/scoop-pkg`. To install, do `scoop install <manifest>`.
+用于xmake和scoop
+
+`xmake repo -a local`
+
+`scoop bucket add maye-pkg https://github.com/maye174/pkg`

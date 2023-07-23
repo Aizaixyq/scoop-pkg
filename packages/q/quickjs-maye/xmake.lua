@@ -20,7 +20,7 @@ package("quickjs-maye")
     on_install("linux", "macosx", "iphoneos", "android", "mingw", "cross", function (package)
         io.writefile("xmake.lua", ([[
             add_rules("mode.debug", "mode.release")
-            target("quickjs")
+            target("quickjs-maye")
                 set_kind("$(kind)")
                 add_files("src/quickjs*.c", "src/cutils.c", "src/lib*.c")
                 add_headerfiles("src/quickjs-libc.h")

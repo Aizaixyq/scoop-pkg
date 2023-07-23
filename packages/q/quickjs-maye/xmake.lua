@@ -24,9 +24,9 @@ package("quickjs-maye")
                 set_languages("c99")
                 add_defines("CONFIG_VERSION=\"%s\"", "_GNU_SOURCE")
                 add_defines("CONFIG_BIGNUM")
-                if is_plat("windows", "mingw") then
-                    add_defines("__USE_MINGW_ANSI_STDIO")
-                end
+                -- if is_plat("windows", "mingw") then
+                --     add_defines("__USE_MINGW_ANSI_STDIO")
+                -- end
         ]]):format(package:version_str()))
         local configs = {}
         if package:config("shared") then

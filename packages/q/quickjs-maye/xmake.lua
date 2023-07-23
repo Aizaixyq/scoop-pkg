@@ -3,13 +3,8 @@ package("quickjs-maye")
     set_homepage("https://bellard.org/quickjs/")
     set_description("QuickJS is a small and embeddable Javascript engine")
 
-    --if is_plat("windows") then
-        add_urls("https://github.com/maye174/quickjs.git")
-        add_versions("2021.03.27", "e6dbee42ae776d40cc8c33e4d3d33f850614848819e1607512fda66ac32a8bf7")
-    --else
-        --add_urls("https://github.com/bellard/quickjs.git")
-        --add_versions("2021.03.27", "b5e62895c619d4ffc75c9d822c8d85f1ece77e5b")
-    --end
+    add_urls("https://github.com/maye174/quickjs.git")
+    add_versions("2021.03.27", "e6dbee42ae776d40cc8c33e4d3d33f850614848819e1607512fda66ac32a8bf7")
 
     if is_plat("linux", "macosx", "iphoneos", "cross") then
         add_syslinks("pthread", "dl", "m")
@@ -17,7 +12,7 @@ package("quickjs-maye")
         add_syslinks("dl", "m")
     end
     
-    on_install("linux", "macosx", "iphoneos", "android", "mingw", "cross", function (package)
+    on_install("linux", "macosx", "iphoneos", "android", "mingw", "cross", "windows", function (package)
         io.writefile("xmake.lua", ([[
             add_rules("mode.debug", "mode.release")
             target("quickjs-maye")
@@ -43,13 +38,13 @@ package("quickjs-maye")
         import("package.tools.xmake").install(package, configs)
     end)
 
-    on_install("windows", function (package)
-        local configs = {}
-        if package:config("shared") then
-            configs.kind = "shared"
-        end
-        import("package.tools.xmake").install(package, configs)
-    end)
+    -- on_install("windows", function (package)
+    --     local configs = {}
+    --     if package:config("shared") then
+    --         configs.kind = "shared"
+    --     end
+    --     import("package.tools.xmake").install(package, configs)
+    -- end)
 
     on_test(function (package)
         assert(package:has_cfuncs("JS_NewRuntime", {includes = "src/quickjs.h"}))

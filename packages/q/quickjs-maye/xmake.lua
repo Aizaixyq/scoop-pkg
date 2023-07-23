@@ -47,5 +47,5 @@ package("quickjs-maye")
     end)
 
     on_test(function (package)
-        assert(package:has_cfuncs("JS_NewRuntime", {includes = "src/quickjs.h"}))
+        assert(package:has_cfuncs("JS_NewRuntime", {includes = "quickjs.h"}))
     end)

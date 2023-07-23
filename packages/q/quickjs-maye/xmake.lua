@@ -5,7 +5,7 @@ package("quickjs-maye")
 
     --if is_plat("windows") then
         add_urls("https://github.com/maye174/quickjs.git")
-        add_versions("2021.03.27", "da68f587ee6b2fedb450b78c6dd56e3d03b3a158")
+        add_versions("2021.03.27", "e6dbee42ae776d40cc8c33e4d3d33f850614848819e1607512fda66ac32a8bf7")
     --else
         --add_urls("https://github.com/bellard/quickjs.git")
         --add_versions("2021.03.27", "b5e62895c619d4ffc75c9d822c8d85f1ece77e5b")

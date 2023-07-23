@@ -15,16 +15,16 @@ package("quickjs-maye")
     on_install("linux", "macosx", "iphoneos", "android", "mingw", "cross", function (package)
         io.writefile("xmake.lua", ([[
             add_rules("mode.debug", "mode.release")
-            target("quickjs")
+            target("quickjs-maye")
                 set_kind("$(kind)")
-                add_files("quickjs*.c", "cutils.c", "lib*.c")
-                add_headerfiles("quickjs-libc.h")
-                add_headerfiles("quickjs.h")
-                add_installfiles("*.js", {prefixdir = "share"})
+                add_files("src/quickjs*.c", "src/cutils.c", "src/lib*.c")
+                add_headerfiles("src/quickjs-libc.h")
+                add_headerfiles("src/quickjs.h")
+                add_installfiles("src/*.js", {prefixdir = "share"})
                 set_languages("c99")
                 add_defines("CONFIG_VERSION=\"%s\"", "_GNU_SOURCE")
                 add_defines("CONFIG_BIGNUM")
-                if is_plat("windows", "mingw") then
+                if is_plat("mingw") then
                     add_defines("__USE_MINGW_ANSI_STDIO")
                 end
         ]]):format(package:version_str()))
@@ -33,7 +33,7 @@ package("quickjs-maye")
             configs.kind = "shared"
         end
         if package:is_plat("cross") then
-            io.replace("quickjs.c", "#define CONFIG_PRINTF_RNDN", "")
+            io.replace("src/quickjs.c", "#define CONFIG_PRINTF_RNDN", "")
         end
         import("package.tools.xmake").install(package, configs)
     end)
@@ -47,5 +47,5 @@ package("quickjs-maye")
     end)
 
     on_test(function (package)
-        assert(package:has_cfuncs("JS_NewRuntime", {includes = "quickjs.h"}))
+        assert(package:has_cfuncs("JS_NewRuntime", {includes = "src/quickjs.h"}))
     end)
